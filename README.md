@@ -38,30 +38,25 @@ The schema is as follows:
 * **department**:
 
   * **id** - INT PRIMARY KEY
-  * **name** - VARCHAR(30) to hold department name
+  * **name** - VARCHAR(20) to hold department name
 
 * **role**:
 
   * **id** - INT PRIMARY KEY
-  * **title** -  VARCHAR(30) to hold role title
+  * **title** -  VARCHAR(40) to hold role title
   * **salary** -  DECIMAL to hold role salary
   * **department_id** -  INT to hold reference to department role belongs to
 
 * **employee**:
 
   * **id** - INT PRIMARY KEY
-  * **first_name** - VARCHAR(30) to hold employee first name
-  * **last_name** - VARCHAR(30) to hold employee last name
+  * **first_name** - VARCHAR(40) to hold employee first name
+  * **last_name** - VARCHAR(40) to hold employee last name
   * **role_id** - INT to hold reference to role employee has
   * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
 
 
-Create a `.env` file in the root folder of the app and include the following, where `password` should be replaced with your own MySQl password:
-
-`MYSQL_KEY = 'password'`
-
-
-This gif demonstrates the application's functionality: [UPDATE]
+In connection.js `password` should be replaced with your own MySQl password.
 
 
 ## License
