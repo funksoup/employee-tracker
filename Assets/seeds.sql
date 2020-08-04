@@ -1,35 +1,34 @@
-USE database employeeTrackerDB;
+use employeeTrackerDB;
 
-INSERT INTO department (name) 
+INSERT INTO department
+    (name)
 VALUES
-    ('Executive'),
-    ('Sales and Marketing'),
+    ('Sales'),
     ('Engineering'),
-    ('Customer Service')
     ('Finance'),
     ('Legal');
 
 INSERT INTO role
     (title, salary, department_id)
 VALUES
-    ('Chief Troublemaker', 440000, 1),
-    ('Growth Hacker', 180000, 2),
-    ('Senior Web Engineer', 250000, 3),
-    ('Account Manager', 160000, 1),
-    ('Chief Accountant', 260000, 5),
-    ('Customer Success Manager', 250000, 4),
-    ('Chief Counsel', 390000, 6);
+    ('Sales Lead', 100000, 1),
+    ('Salesperson', 80000, 1),
+    ('Lead Engineer', 150000, 2),
+    ('Software Engineer', 120000, 2),
+    ('Account Manager', 160000, 3),
+    ('Accountant', 125000, 3),
+    ('Legal Team Lead', 250000, 4),
+    ('Lawyer', 190000, 4);
 
 INSERT INTO employees
-    (first_name, last_name, role_id, manager_id)
+    (first_name, last_name, role_id, mgr_id)
 VALUES
-    ('Alexis', 'Hunt', 1, NULL),
-    ('Jane', 'Doe', 2, 1),
-    ('Wilson', 'Warrington', 3, NULL),
-    ('Blake', 'Smythe', 4, 3),
-    ('Ken', 'Singer', 5, NULL),
-    ('Ashton', 'Kutcheropolis', 6, 5),
-    ('Sarah', 'Malley', 7, NULL),
-    ('Thomas', 'Barber', 8, 7);
-
+    ('John', 'Doe', 1, NULL),
+    ('Mike', 'Chan', 2, 1),
+    ('Ashley', 'Rodriguez', 3, NULL),
+    ('Kevin', 'Tupik', 4, 3),
+    ('Kunal', 'Singh', 5, NULL),
+    ('Malia', 'Brown', 6, 5),
+    ('Sarah', 'Lourd', 7, NULL),
+    ('Tom', 'Allen', 8, 7);
 
